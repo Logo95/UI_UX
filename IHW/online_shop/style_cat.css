@@ -1,0 +1,159 @@
+*
+{
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin:  0;
+padding:  0;
+box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    min-height: 100vh;
+    background-image:url('img/back.jpg'); 
+    background-size: cover;
+    background-position-y: 90%;
+    background-repeat:repeat;
+    
+}
+header{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo 
+{
+    text-shadow: 1px 1px 2px rgb(50,150,200);
+    font-family: "Product Sans Medium", Helvetica, Sans;
+    color:rgb(47, 100, 199);
+    font-size: 26pt;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: 2em;
+    text-transform: uppercase;
+}
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: none;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color:rgb(47, 100, 199);
+    border-radius: 20px;
+}
+header ul li a:hover ,
+.highlight 
+{
+    background:rgb(121, 158, 228);
+    color: rgb(5, 53, 156);
+}
+.menu
+{
+    position: absolute;
+    top:40%;
+    transform: translate(0,-50%);
+    left:49.5%;
+    transform: translate(-50%,0);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li{
+    position: absolute;
+    left:-31px;
+    list-style: none;
+    transform-origin: 130px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(110px);
+
+}
+.main_icon
+{
+   font-size: 40px;
+}
+.cat_icon
+{
+    font-size: 30px;
+}
+.menu.active li
+{
+    transform: rotate(calc(360deg/8 * var(--i)));
+    
+}
+.menu li a
+{
+    background: rgb(121, 158, 228);
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: rotate(calc(360deg/-8 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    color: #111;
+    transition: 0.5s;
+}
+.menu li a:hover
+{
+    color:rgb(240, 252, 245);
+    background: rgb(64, 115, 211);
+    width: 60px;
+    height: 60px;
+}
+.toggle
+{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: rgb(121, 158, 228);
+    display: flex;
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0px 4px rgba(0,0,0,0.15);
+    font-size: 2em;
+    transition: transform 1.25s;
+}
+
+.thanksForThePuchase
+{
+    border: 2px solid #0f2a8180;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: "Product Sans Medium", Helvetica, Sans;
+    font-size: 30px;
+    background-color: #FFFFFF;
+    height: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.menu.active .toggle
+{
+    transform: rotate(315deg);
+    color:rgb(240, 252, 245);
+    background: rgb(64, 115, 211);
+    width: 75px;
+    height: 75px;
+    transition: 0.75s;
+}

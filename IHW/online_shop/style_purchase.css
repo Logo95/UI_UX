@@ -1,0 +1,244 @@
+*
+{
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin:  0;
+padding:  0;
+box-sizing: border-box;
+
+}
+body
+{
+    display: flex;
+    min-height: 100vh;
+    background-image:url('img/back.jpg'); 
+    background-size: cover;
+    background-color: rgb(22,96,135);
+    background-position-y: 90%;
+    background-repeat:no-repeat;
+    
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo 
+{
+    text-shadow: 1px 1px 2px rgb(50,150,200);
+    font-family: "Product Sans Medium", Helvetica, Sans;
+    color:rgb(47, 100, 199);
+    font-size: 26pt;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: 2em;
+    text-transform: uppercase;
+}
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: none;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color:rgb(47, 100, 199);
+    border-radius: 20px;
+}
+header ul li a:hover ,
+.highlight 
+{
+    background:rgb(121, 158, 228);
+    color: rgb(5, 53, 156);
+}
+@media only screen and (min-width: 450px) {
+	.product_img img{
+		width: 250px;
+	}
+    .description{
+        max-width: 300px;
+        top:45%;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+	.product_img img{
+		width: 500px;
+        top:45%;
+	}
+    .description{
+        max-width: 350px;
+        top:43%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+	.product_img img{
+		width: 550px;
+	}
+    .description{
+        max-width: 550px;
+    }
+}
+.product_img
+{
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left:10%;
+    top:50%;
+    padding: 15px;
+    transform: translate(50%,0);
+    transform: translate(0,-50%);
+    align-items: center;
+}
+.product_img img
+{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: auto;
+    transition: .4s ease-out;
+}
+.product_img p
+{
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(8, 49, 102);
+    font-size: 18pt;
+    font-weight: 600;
+}
+.description
+{
+    position: absolute;
+    left:60%;
+
+    transform: translate(50%,0);
+    transform: translate(0,-50%);
+    align-items: center;
+    justify-content: center;
+}
+.description p.name{
+    font-family: "Product Sans Medium", Helvetica, Sans;
+    text-align: center;
+	text-shadow: 1px 1px 1px #808080;
+	font-size: 30px;
+}
+.description p{
+    position: relative;
+	margin: 0;
+    padding: 4px;
+	font-size: 1em;
+	line-height: 1.4em;
+	overflow: hidden;
+    max-height: 10em;
+    text-align: justify;
+}
+
+.group 			  
+  { 
+     position: absolute;
+     left: 50%;
+     transform: translate(-50%, 0)
+  }
+  input 				
+  {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  input:focus 		
+  { 
+    outline:none; 
+  }
+  input:focus ~ label, input:valid ~ label 		{
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+  }
+  .bar 	
+  { 
+      position:relative;
+      display:block; 
+      width:300px; 
+  }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+label 				 {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .button {
+    position: absolute;
+    left:50%;
+    transform: translate(-50%,0);
+   
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(37,129,178);
+    border: none;
+    border-radius: 15px;
+
+}
+  
+.button:hover 
+{
+    background-color: #083661
+}
+  
+.button:active {
+    background-color: #15386d;
+
+    transform: translateY(4px);
+    left:50%;
+    transform: translate(-50%,0);
+}
+
+  
